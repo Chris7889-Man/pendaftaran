@@ -1,0 +1,100 @@
+/* Tablet Portrait (iPad & Android Tablet) */
+@media (max-width: 1280px) {
+  .example-2 {
+    gap: 13px;
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .example-2 {
+    gap: 13px;
+    margin-left: 65px;
+  }
+}
+
+/* Mobile Standard (iPhone, Samsung Galaxy, dll) */
+@media (max-width: 768px) {
+     .example-2 {
+    gap: 12px;
+    margin-right: 280px;
+  }
+  :root {
+    --icon-size-desktop: 45px; /* Sedikit mengecil di tablet/hp besar */
+  }
+
+
+  .example-2 .icon-content .tooltip {
+    display: none; /* Opsional: Sembunyikan tooltip di layar sentuh karena tidak ada hover */
+
+  }
+}
+
+/* Mobile Kecil (iPhone SE / Android Kecil) */
+@media (max-width: 412px) {
+  .example-2 {
+    gap: 10px; /* Jarak lebih rapat agar muat satu baris */
+    margin-right: 80px;
+  }
+
+  .example-2 .icon-content a {
+    width: var(--icon-size-mobile);
+    height: var(--icon-size-mobile);
+  }
+
+  .example-2 .icon-content a svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+  @media (max-width: 500px) {
+  .example-2 {
+    gap: 0px; /* Jarak lebih rapat agar muat satu baris */
+    margin-left: 150px;
+  }
+}
+
+  @media (max-width: 400px) {
+  .example-2 {
+    gap: 4px; /* Jarak lebih rapat agar muat satu baris */
+    margin-left: 9px;
+  }
+}
+
+  @media (max-width: 320px) {
+  .example-2 {
+    gap: 4px; /* Jarak lebih rapat agar muat satu baris */
+    margin-left: 79px;
+  }
+}
+
+
+
+
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}

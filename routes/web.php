@@ -14,6 +14,10 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
+Route::get('/kosentrasi', function () {
+    return view('kosentrasi');
+})->name('kosentrasi');
+
 Route::get('/form-pendaftaran', [PendaftaranPesertaController::class, 'show'])->name('form-pendaftaran');
 
 Route::post('/form-pendaftaran', [PendaftaranPesertaController::class, 'store'])->name('form-pendaftaran.store');

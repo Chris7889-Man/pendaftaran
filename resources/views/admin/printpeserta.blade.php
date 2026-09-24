@@ -66,6 +66,40 @@
             border-top: 2px dashed black;
             margin: 20px 0;
         }
+        /* print */
+         /* ✅ PRINT-SPECIFIC CSS */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .kartu-container, .kartu-container * {
+                visibility: visible;
+            }
+
+            .kartu-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 10mm !important;
+                margin: 0 !important;
+            }
+
+            .kartu {
+                border: 2px solid #000 !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 15mm !important;
+                page-break-after: always;
+            }
+
+            /* Hilangkan background untuk hemat tinta */
+            .info-value {
+                background: white !important;
+            }
+        }
     </style>
 </head>
 

@@ -94,7 +94,7 @@
             </h2>
 
             <p class="mt-4">
-              " Jangankan pintu, jendela pun tak ada, hanya ada satu atap dengan
+            " Jangankan pintu, jendela pun tak ada, hanya ada satu atap dengan
               topangan empat tiang, tempat kami berteduh, berbagi saling sapa,
               tertawa bersama penuh <span class="dimensi">CINTA.</span> Itulah
               rumah kami <span class="dimensi">DIMENSI </span>"
@@ -144,7 +144,7 @@
             </div>
             <div class="col-lg-6 pt-5 pt-lg-0">
               <h3 data-aos="fade-up">Sejarah DIMENSI</h3>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p data-aos="fade-up" data-aos-delay="100" class="sejarah">
                 DIPANEGARA MANAGEMENT STUDY atau yang biasa disebut DIMENSI
                 berdiri pada tanggal 21 - Desember - 1999 bertempat di
                 Universitas Dipanegara Makassar, yang dipelopori oleh Ayahanda
@@ -172,7 +172,9 @@
           </div>
         </div>
       </section>
-      <!-- End About Section -->
+      {{-- <!-- End About Section --> --}}
+
+
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services section-bg">
@@ -185,11 +187,26 @@
 
           <div class="row">
             <div
-              class="col-md-6 col-lg-3 d-flex align-items-stretch"
+             class="col-md-6 col-lg-3 d-flex align-items-stretch"
               data-aos="zoom-in"
-              data-aos-delay="100"
-            >
+              data-aos-delay="100">
               <div class="icon-box">
+
+                 {{-- testing kode --}}
+                <div class="portfolio-wrap">
+
+                  <div class="portfolio-links">
+                  <a
+                    href="{{ asset('assets/profile/img/portfolio/1.png') }}"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"><i class="bi bi-plus"></i
+                  ></a>
+                  </div>
+                <div class="portfolio-info">
+                  {{-- <h4>Videografi</h4> --}}
+                  <p></p>
+                </div>
+
                 <div class="icon"><i class="bx bxl-chrome"></i></div>
                 <h4 class="title"><a href="#">Pemrograman Web</a></h4>
                 <p class="description">
@@ -197,8 +214,10 @@
                   merupakan istilah yang erat kaitannya dengan internet serta
                   situs atau website.
                 </p>
+                  </div>
               </div>
             </div>
+
 
             <div
               class="col-md-6 col-lg-3 d-flex align-items-stretch"
@@ -206,6 +225,24 @@
               data-aos-delay="200"
             >
               <div class="icon-box" href="#">
+
+                 {{-- testing kode --}}
+                <div class="portfolio-wrap">
+
+                  <div class="portfolio-links">
+                  <a
+                    href="{{ asset('assets/profile/img/portfolio/2.png') }}"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"><i class="bi bi-plus"></i
+                  ></a>
+                  </div>
+                <div class="portfolio-info">
+                  {{-- <h4>Videografi</h4> --}}
+                  <p></p>
+                </div>
+
+
+
                 <div class="icon"><i class="bx bx-mobile"></i></div>
                 <h4 class="title"><a href="#">Pemrograman Mobile</a></h4>
                 <p class="description">
@@ -213,6 +250,7 @@
                   perangkat lunak yang dirancang khusus untuk digunakan pada
                   perangkat mobile, seperti smartphone atau tablet.
                 </p>
+                  </div>
               </div>
             </div>
 
@@ -222,6 +260,24 @@
               data-aos-delay="300"
             >
               <div class="icon-box">
+
+                 {{-- testing kode --}}
+                <div class="portfolio-wrap">
+
+                  <div class="portfolio-links">
+                  <a
+                    href="{{ asset('assets/profile/img/portfolio/3.png') }}"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"><i class="bi bi-plus"></i
+                  ></a>
+                  </div>
+                <div class="portfolio-info">
+                  {{-- <h4>Videografi</h4> --}}
+                  <p></p>
+                </div>
+
+
+
                 <div class="icon"><i class="bx bxl-adobe"></i></div>
                 <h4 class="title"><a href="#">Desain Grafis</a></h4>
                 <p class="description">
@@ -230,6 +286,7 @@
                   ilustrasi yang dimaksudkan untuk menciptakan persepsi akan
                   suatu pesan yang disampaikan.
                 </p>
+                  </div>
               </div>
             </div>
 
@@ -239,6 +296,24 @@
               data-aos-delay="400"
             >
               <div class="icon-box">
+
+                {{-- testing kode --}}
+                <div class="portfolio-wrap">
+
+                  <div class="portfolio-links">
+                <a
+                    href="{{ asset('assets/profile/img/portfolio/4.png') }}"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"><i class="bi bi-plus"></i
+                  ></a>
+                  </div>
+                <div class="portfolio-info">
+                  {{-- <h4>Videografi</h4> --}}
+                  <p></p>
+                </div>
+
+
+
                 <div class="icon"><i class="bx bx-video-recording"></i></div>
                 <h4 class="title"><a href="#">Videografi</a></h4>
                 <p class="description">
@@ -259,7 +334,7 @@
           <div class="section-title">
             <h2>Perjalanan Kami</h2>
             <br>
-            <p class="textblt">Dokumentasi kegiatan yang telah kami lakukan bersama sama selama ini</p>
+            <p class="textblt">Dokumentasi kegiatan yang telah kami lakukan selama ini</p>
           </div>
 
           <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -278,20 +353,20 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <img
-                  src="{{ asset('assets/profile/img/portfolio/Pelantikan.jpg') }}"
+                  src="{{ asset('assets/profile/img/portfolio/BPH.jpeg ') }}"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-links">
                   <a
-                    href="{{ asset('assets/profile/img/portfolio/Pelantikan.jpg') }}"
+                    href="{{ asset('assets/profile/img/portfolio/BPH.jpeg') }}"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                     ><i class="bi bi-plus"></i
                   ></a>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Pelantikan Pengurus 2025-2026</h4>
+                  <h4>Pelantikan BPH 2025-2026</h4>
                   <p></p>
                 </div>
               </div>
@@ -300,13 +375,13 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img
-                  src="{{ asset('assets/profile/img/portfolio/ditra.jpg') }}"
+                  src="{{ asset('assets/profile/img/portfolio/Perkenalan.jpeg') }}"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-links">
                   <a
-                    href="{{ asset('assets/profile/img/portfolio/ditra.jpg') }}"
+                    href="{{ asset('assets/profile/img/portfolio/Perkenalan.jpeg') }}"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
 
@@ -314,7 +389,7 @@
                   ></a>
                 </div>
                 <div class="portfolio-info">
-                  <h4>DITRA XXI</h4>
+                  <h4>Perkenalan UKM</h4>
 
                 </div>
               </div>
@@ -323,20 +398,20 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <img
-                  src="{{ asset('assets/profile/img/portfolio/rang21.png') }}"
+                  src="{{ asset('assets/profile/img/portfolio/rangg.jpeg') }}"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-links">
                   <a
-                    href="{{ asset('assets/profile/img/portfolio/rang21.png') }}"
+                    href="{{ asset('assets/profile/img/portfolio/rangg.jpeg') }}"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                     ><i class="bi bi-plus"></i
                   ></a>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Rapat Anggota Ke - XXI</h4>
+                  <h4>Rapat Anggota Ke - XXIII</h4>
                 </div>
               </div>
             </div>
@@ -350,7 +425,7 @@
                 />
                 <div class="portfolio-links">
                   <a
-                    href="{{ asset('assets/profile/img/portfolio/RuangBakti.jpg') }}"
+                    href="{{ asset('assets/profile/img/portfolio/RuangBakti.jpeg') }}"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                     ><i class="bi bi-plus"></i
@@ -367,88 +442,25 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img
-                  src="{{ asset('assets/profile/img/portfolio/ruangbakti1.jpeg') }}"
+                  src="{{ asset('assets/profile/img/portfolio/pembelajaran.jpeg') }}"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-links">
                   <a
-                    href="{{ asset('assets/profile/img/portfolio/ruangbakti1.jpeg') }}"
+                    href="{{ asset('assets/profile/img/portfolio/pembelajaran.jpeg') }}"
                     data-gallery="portfolioGallery"
                     class="portfolio-lightbox"
                     ><i class="bi bi-plus"></i
                   ></a>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Ruang Bakti 1</h4>
+                  <h4>Pembelajaran AMD </h4>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="{{ asset('assets/profile/img/portfolio/indor.jpeg') }}"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-links">
-                  <a
-                    href="{{ asset('assets/profile/img/portfolio/indor.jpeg') }}"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-                <div class="portfolio-info">
-                  <h4>Indor DITRA XXIII</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="{{ asset('assets/profile/img/portfolio/Perkenalan.jpeg') }}"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-links">
-                  <a
-                    href="{{ asset('assets/profile/img/portfolio/Perkenalan.jpeg') }}"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-                <div class="portfolio-info">
-                  <h4>Perkenalan UKM </h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="{{ asset('assets/profile/img/portfolio/milad25.JPG') }}"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-links">
-                  <a
-                    href="{{ asset('assets/profile/img/portfolio/milad25.JPG') }}"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox"
-                    ><i class="bi bi-plus"></i
-                  ></a>
-                </div>
-                <div class="portfolio-info">
-                  <h4>Milad yang ke 25</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
                 <img
                   src="{{ asset('assets/profile/img/portfolio/milad26.jpeg') }}"
@@ -464,11 +476,10 @@
                   ></a>
                 </div>
                 <div class="portfolio-info">
-                  <h4>Milad yang ke 26</h4>
+                  <h4>Milad 26</h4>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
       <!-- End Portfolio Section -->
@@ -503,6 +514,8 @@
                   <br>
                   Dalam satu asa bersama
                   <br>
+                  <br>
+
                   Tri Dharma perguruan tinggi
                   <br>
                   Wujudkanlah wahai Dimensi
@@ -521,6 +534,7 @@
                   Wujudkan wahai harumkan
                   <br>
                   Untuk kader dan almamatermu
+                  <br>
                   <br>
                   Dimensi Dipanegara
                   <br>
@@ -644,7 +658,7 @@
                   <i class="bi bi-phone"></i>
                   <h4>No Telepon:</h4>
                   <p>085751594909</p>
-
+                 </div>
 
                   <!-- From Uiverse.io by wilsondesouza -->
 <ul class="example-2">
@@ -673,7 +687,7 @@
 
     <div class="tooltip">facebook</div>
   </li>
-  <li class="icon-content">
+  {{-- <li class="icon-content">
     <a href="https://github.com/DIMENSIcoding/" aria-label="GitHub" data-social="github">
       <div class="filled"></div>
       <svg
@@ -692,7 +706,7 @@
       </svg>
     </a>
     <div class="tooltip">GitHub</div>
-  </li>
+  </li> --}}
   <li class="icon-content">
     <a
       href="https://www.instagram.com/dimensi_official/"
@@ -739,7 +753,7 @@
   </li>
 </ul>
 
-                </div>
+
               </div>
 
             </div>

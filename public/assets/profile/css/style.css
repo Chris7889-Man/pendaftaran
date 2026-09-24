@@ -335,6 +335,8 @@ body {
   font: bold;
 }
 
+
+
 /* From Uiverse.io by wilsondesouza */
 ul {
   list-style: none;
@@ -344,8 +346,9 @@ ul {
   display: flex;
   justify-content: center;
   margin-right: 140px;
+  margin-bottom: -20px;
 }
-.example-2 .icon-content {
+.example-2 .-content {
   margin: 0px 10px;
   position: relative;
 }
@@ -406,96 +409,74 @@ ul {
   height: 100%;
 }
 
+/* KODE ANDA EXACT - TAPI TAMBAH :hover & :active */
 .example-2 .icon-content a[data-social="facebook"] .filled,
-.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip,
+.example-2 .icon-content a[data-social="facebook"]:hover .filled,
+.example-2 .icon-content a[data-social="facebook"]:active .filled {
   background-color: #3b5998;
 }
 
 .example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+.example-2 .icon-content a[data-social="github"] ~ .tooltip,
+.example-2 .icon-content a[data-social="github"]:hover .filled,
+.example-2 .icon-content a[data-social="github"]:active .filled {
   background-color: #24262a;
 }
+
 .example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip,
+.example-2 .icon-content a[data-social="instagram"]:hover .filled,
+.example-2 .icon-content a[data-social="instagram"]:active .filled {
+  background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
 }
+
 .example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip,
+.example-2 .icon-content a[data-social="youtube"]:hover .filled,
+.example-2 .icon-content a[data-social="youtube"]:active .filled {
   background-color: #ff0000;
 }
-/* Tablet Portrait (iPad & Android Tablet) */
-@media (max-width: 1024px) {
-  .example-2 {
-    gap: -3px;
-    margin-right: -12px;
-  }
+
+
+:root {
+  /* Ukuran ikon: min 30px, fleksibel 5vw, maks 45px */
+  --icon-size: clamp(30px, 5vw, 45px);
+  /* Ukuran SVG di dalam: min 16px, maks 24px */
+  --svg-size: clamp(16px, 3vw, 24px);
+  /* Gap antar ikon: min 4px, maks 13px */
+  --icon-gap: clamp(4px, 1.5vw, 23px);
 }
 
-/* Mobile Standard (iPhone, Samsung Galaxy, dll) */
+.example-2 {
+  display: flex;
+  flex-wrap: wrap;       /* Agar ikon turun ke bawah jika layar sangat sempit */
+  justify-content: flex-start; /* Ikon otomatis di tengah layar (Ganti ke 'flex-start' jika mau di kiri) */
+  gap: var(--icon-gap);
+  margin: 10px auto;     /* Otomatis rata tengah secara horizontal */
+  width: 90%;            /* Memberi napas di sisi kiri-kanan layar */
+  max-width: 1200px;
+}
+
+.example-2 .icon-content a {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-2 .icon-content a svg {
+  width: var(--svg-size);
+  height: var(--svg-size);
+}
+
+/* Hanya gunakan SATU media query untuk hal yang benar-benar berubah drastis */
 @media (max-width: 768px) {
-     .example-2 {
-    gap: 12px;
-    margin-right: 280px;
-  }
-  :root {
-    --icon-size-desktop: 45px; /* Sedikit mengecil di tablet/hp besar */
-  }
-
-
   .example-2 .icon-content .tooltip {
-    display: none; /* Opsional: Sembunyikan tooltip di layar sentuh karena tidak ada hover */
-
+    display: none; /* Sembunyikan tooltip di layar sentuh */
   }
 }
-
-/* Mobile Kecil (iPhone SE / Android Kecil) */
-@media (max-width: 412px) {
-  .example-2 {
-    gap: 10px; /* Jarak lebih rapat agar muat satu baris */
-    margin-right: 80px;
-  }
-
-  .example-2 .icon-content a {
-    width: var(--icon-size-mobile);
-    height: var(--icon-size-mobile);
-  }
-
-  .example-2 .icon-content a svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-  @media (max-width: 500px) {
-  .example-2 {
-    gap: 0px; /* Jarak lebih rapat agar muat satu baris */
-    margin-left: 150px;
-  }
-}
-
-  @media (max-width: 400px) {
-  .example-2 {
-    gap: 4px; /* Jarak lebih rapat agar muat satu baris */
-    margin-left: 9px;
-  }
-}
-
-  @media (max-width: 320px) {
-  .example-2 {
-    gap: 4px; /* Jarak lebih rapat agar muat satu baris */
-    margin-left: 79px;
-  }
-}
-
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -542,7 +523,7 @@ ul {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #4687ee;
+  color: #eb5d1e;
 }
 
 .navbar .getstarted,
@@ -1014,6 +995,7 @@ section {
   border-color: #ef7f4d;
 }
 
+
 .services .icon i {
   font-size: 48px;
   line-height: 1;
@@ -1172,6 +1154,191 @@ section {
   bottom: 0;
 }
 
+
+
+/* --------------------------------------------------------------
+                             #tampilan kosentrasi
+--------------------------------------------------------------- */
+.services .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.services .portfolio-wrap::before {
+  content: "";
+  background: rgba(230, 225, 222, 0.6);
+  position: absolute;
+  left: 300%;
+  right: 200%;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+}
+
+.services .portfolio-wrap img {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Pastikan gambar full width */
+  height: 100%;
+  object-fit: cover;
+}
+
+.services .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  position: absolute;
+  left: 50%; /* Posisi tengah */
+  top: 50%; /* Posisi tengah */
+  transform: translate(-50%, -50%); /* Perfect center */
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  width: 100%; /* Full width container */
+}
+
+.services .portfolio-wrap .portfolio-links a {
+  color: #1e1eeb;
+  margin: 0 8px 8px 8px; /* Margin antar tombol */
+  line-height: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 20px; /* Padding yang proporsional */
+  border-radius: 6px; /* Border radius kecil */
+  text-align: center;
+  /* HAPUS width dan height fixed - biarkan auto */
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: none;
+  font-size: 16px;
+  min-width: 600px; /* Minimum width */
+  min-height: 400px; /* Minimum height */
+}
+
+.services .portfolio-wrap .portfolio-links a i {
+  line-height: 1;
+  font-size: 20px;
+  display: block;
+}
+
+.services .portfolio-wrap .portfolio-links a:hover {
+  background: #f2eded !important; /* Pastikan override */
+  opacity: 0.1; /* Seluruh elemen jadi transparan */
+  color: #fff !important;
+  transform: translateY(-3px); /* Efek lift */
+  box-shadow: 0 8px 25px rgba(243, 242, 242, 0.4);
+  padding: 14px 22px; /* Sedikit membesar saat hover */
+}
+
+/* HAPUS selector salah ini */
+.services .portfolio-wrap .portfolio-links :hover {
+  background-color: rgba(251, 5, 5, 0.3);
+}
+
+.services .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+}
+
+.services .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #0b0000;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.services .portfolio-wrap .portfolio-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.services .portfolio-wrap:hover::before {
+  left: 0;
+}
+
+.services .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+}
+
+.services .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  bottom: 20px; /* Naik sedikit dari bawah */
+}
+
+
+
+
+
+/* --------------------------------------------------------------
+                             #teks adlantun
+--------------------------------------------------------------- */
+section .container #faq1 p{
+    font-weight: 530;
+}
+section .container #faq2 p{
+    font-weight: bold;
+}
+section .container #faq3 p{
+    font-weight: bold;
+}
+section .container #faq4 p{
+    font-weight: bold;
+}
+section .container #faq5 p{
+    font-weight: bold;
+}
+
+
+section .container p.mt-4{
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 1.5em;
+    
+}
+
+section .container p.sejarah{
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 1.5em;
+}
+
+
+
+/*--------------------------------------------------------------
+                            # Card
+--------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1312,98 +1479,8 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-/* .team {
-  background: #fff;
-  padding: 60px 0;
-}
+/* Modal Card Custom */
 
-.team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  background: #343a40;
-  position: relative;
-  overflow: hidden;
-}
-
-.team .member .member-info {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.2s;
-}
-
-.team .member .member-info-content {
-  position: absolute;
-  left: 50px;
-  right: 0;
-  bottom: 0;
-  transition: bottom 0.4s;
-}
-
-.team .member .member-info-content h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-  color: #fff;
-}
-
-.team .member .member-info-content span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-  color: #fff;
-}
-
-.team .member .social {
-  position: absolute;
-  left: -50px;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  transition: left ease-in-out 0.3s;
-  background: rgba(78, 64, 57, 0.6);
-  text-align: center;
-}
-
-.team .member .social a {
-  transition: color 0.3s;
-  display: block;
-  color: #fff;
-  margin-top: 15px;
-}
-
-.team .member .social a:hover {
-  color: #eb5d1e;
-}
-
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
-.team .member:hover .member-info {
-  background: linear-gradient(
-    0deg,
-    rgba(78, 64, 57, 0.95) 0%,
-    rgba(78, 64, 57, 0.95) 15%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.team .member:hover .member-info-content {
-  bottom: 30px;
-  transition: bottom 0.4s;
-}
-
-.team .member:hover .social {
-  left: 0;
-  transition: left ease-in-out 0.3s;
-} */
 
 /*--------------------------------------------------------------
 # Clients
